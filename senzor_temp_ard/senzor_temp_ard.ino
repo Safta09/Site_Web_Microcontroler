@@ -12,15 +12,15 @@ DHT dht_sensor(DHT_SENSOR_PIN, DHT_SENSOR_TYPE);
 
 // WiFi
 
-#define WIFI_SSID "AndroidAP6537"
-#define WIFI_PASSWORD "12345678"
+#define WIFI_SSID "Android"
+#define WIFI_PASSWORD ""
 
 
-//#define WIFI_SSID "iPhone-Alessandra"
-//#define WIFI_PASSWORD "12345678"
+//#define WIFI_SSID ""
+//#define WIFI_PASSWORD ""
 
 // Firebase
-#define API_KEY "AIzaSyCR4543J2kApr6ELQjHi_-8iWElw0Ke3Bc"
+#define API_KEY "Api Key "
 #define DATABASE_URL "https://senzor-temperatura-17dc0-default-rtdb.firebaseio.com/" 
 
 FirebaseData fbdo;
