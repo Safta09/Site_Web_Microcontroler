@@ -1,0 +1,235 @@
+/* --- CSS Îmbunătățit pentru Form --- */
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    background-image: url(image/pozalog.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+header {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+nav {
+    display: flex;
+    padding: 15px 5%;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo h2 {
+    color: white;
+    font-size: 24px;
+}
+
+.nav-links {
+    flex: 1;
+    text-align: right;
+}
+
+.nav-links ul li {
+    list-style: none;
+    display: inline-block;
+    padding: 8px 12px;
+    position: relative;
+}
+
+.nav-links ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 14px;
+    transition: 0.3s;
+}
+
+.nav-links ul li::after {
+    content: '';
+    width: 0%;
+    height: 2px;
+    background: #f44336;
+    display: block;
+    margin: auto;
+    transition: 0.3s;
+}
+
+.nav-links ul li:hover::after {
+    width: 100%;
+}
+
+nav .fa-solid {
+    display: none;
+}
+
+/* Nou container pentru alinierea formularului și promo-box */
+.form-container {
+    margin-top: 100px;
+    width: 90%;
+    max-width: 1000px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 20px;
+}
+
+.box {
+    padding: 20px;
+    width: 350px;
+    background: rgba(49, 49, 49, 0.7);
+    backdrop-filter: blur(10px);
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+}
+
+.box .form {
+    padding: 10px;
+}
+
+.box .form h2 {
+    text-align: center;
+    color: #fff;
+    margin-bottom: 20px;
+    font-size: 24px;
+}
+
+.box .form form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.box .form .inputbox {
+    position: relative;
+    width: 100%;
+    margin-bottom: 25px;
+}
+
+.box .form .inputbox input {
+    width: 100%;
+    padding: 10px 5px;
+    border: none;
+    outline: none;
+    background: none;
+    border-bottom: 1px solid #fff;
+    color: #fff;
+    font-size: 16px;
+}
+
+.box .form .inputbox span {
+    position: absolute;
+    left: 5px;
+    top: -20px;
+    font-size: 14px;
+    color: #ddd;
+    transition: 0.3s;
+}
+
+.box .form .sub {
+    width: 100%;
+    padding: 12px;
+    margin-top: 10px;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    outline: none;
+    background: #0cc0df;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background 0.3s;
+}
+
+.box .form .sub:hover {
+    background: #09a5c1;
+}
+
+.promo-box {
+    background-color: rgba(224, 247, 250, 0.6);
+    border: 2px solid #00838f;
+    padding: 20px;
+    border-radius: 10px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color:black;
+    width: 450px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 1);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.promo-box h2 {
+    margin-top: 0;
+    font-weight: 700;
+    margin-bottom: 15px;
+}
+
+.promo-box p {
+    line-height: 1.5;
+    font-size: 1.1rem;
+}
+
+/* Media Queries pentru Responsive Design */
+@media(max-width: 768px) {
+    .form-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .promo-box {
+        width: 100%;
+        max-width: 350px;
+        order: 2; /* Mută promo-box sub formular pe ecrane mici */
+    }
+
+    .nav-links ul li {
+        display: block;
+        margin: 20px 0;
+    }
+    
+    .nav-links {
+        position: fixed;
+        background: rgba(244, 67, 54, 0.95);
+        height: 100vh;
+        width: 200px;
+        top: 0;
+        right: -200px;
+        text-align: left;
+        z-index: 2000;
+        transition: 0.5s;
+        padding-top: 50px;
+    }
+    
+    .nav-links ul {
+        padding: 20px;
+    }
+    
+    nav .fa-solid {
+        display: block;
+        color: #fff;
+        margin: 10px;
+        font-size: 22px;
+        cursor: pointer;
+    }
+    
+    .nav-links .fa-xmark {
+        position: absolute;
+        top: 15px;
+        right: 15px;
+    }
+}
+

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+
+<html>
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>DHT Readings</title>
+ <link rel="stylesheet" href="senzor.css">
+     
+  </head>
+  <body>
+    <div class="data-head">DHT Sensor Realtime Readings</div>
+
+    <div class="data-container">
+      <div class="data-item">
+        <h2>Temperature</h2>
+        <p class="value" id="temperature">22 &#8451;</p>
+      </div>
+      <div class="data-item">
+        <h2>Humidity</h2>
+        <p class="value" id="humidity">10%</p>
+      </div>
+    </div>
+
+      
+      
+
+
+
+<script type="module">
+  import { initializeApp } from "https://www.gstatic.com/firebasejs/11.8.1/firebase-app.js";
+  import { getDatabase, ref, onValue } from "https://www.gstatic.com/firebasejs/11.8.1/firebase-database.js";
+  import { getAnalytics } from "https://www.gstatic.com/firebasejs/11.8.1/firebase-analytics.js";
+
+  const firebaseConfig = {
+    apiKey: "AIzaSyCR4543J2kApr6ELQjHi_-8iWElw0Ke3Bc",
+    authDomain: "senzor-temperatura-17dc0.firebaseapp.com",
+    databaseURL: "https://senzor-temperatura-17dc0-default-rtdb.firebaseio.com",
+    projectId: "senzor-temperatura-17dc0",
+    storageBucket: "senzor-temperatura-17dc0.appspot.com", // fixed domain
+    messagingSenderId: "882240521897",
+    appId: "1:882240521897:web:4ee19288b43fbb674e4bb8",
+    measurementId: "G-MEFQ8QV1ET"
+  };
+
+  // Initialize Firebase
+  const app = initializeApp(firebaseConfig);
+  const analytics = getAnalytics(app);
+  const database = getDatabase(app);
+
+  // Create references to your data
+  const humidityRef = ref(database, "DHT_11/Humidity");
+  const temperatureRef = ref(database, "DHT_11/Temperature");
+
+  // Listen for changes and update UI
+  onValue(humidityRef, (snapshot) => {
+    const humidity = snapshot.val();
+    document.getElementById("humidity").innerHTML = humidity + "%";
+  });
+
+  onValue(temperatureRef, (snapshot) => {
+    const temperature = snapshot.val();
+    document.getElementById("temperature").innerHTML = temperature + "&#8451;";
+  });
+</script>
+
+  </body>
+</html>

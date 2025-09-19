@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Orsovacity</title>
+        <link rel="stylesheet" href="style.css">
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;600;700&display=swap" rel="stylesheet">
+              <script src="https://kit.fontawesome.com/63a91387ac.js" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.6.0/css/fontawesome.min.css">
+        
+        
+             <!-----------JavaScript for Toggle Menu------->
+   <script>
+
+    
+            
+            function showMenu() {
+                 var navLinks = document.getElementById("navLinks");
+                console.log("aici");
+                navLinks.style.right = "0";
+            }
+            
+            function hideMenu() {
+                 var navLinks = document.getElementById("navLinks");
+                    console.log("aici");
+                navLinks.style.right = "-200px";
+            }
+        </script>
+        
+        
+        <!-- Stil pentru containerul senzorului -->
+<style>
+    .weather-container {
+        position: absolute;
+        bottom: 130px;
+        right: 60px;
+        display: flex;
+        background-color: rgba(255, 255, 255, 0.6 );
+        border-radius: 10px;
+        padding: 10px;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        z-index: 100;
+    }
+    
+    .weather-item {
+        text-align: center;
+        margin: 0 15px;
+    }
+    
+    .weather-item h3 {
+        font-size: 16px;
+        margin-bottom: 5px;
+        color: #333;
+    }
+    
+    .weather-value {
+        font-size: 24px;
+        font-weight: bold;
+        color:darkblue;
+    }
+    
+    @media (max-width: 768px) {
+        .weather-container {
+            position: absolute;
+            margin: 10px auto;
+            width: 90%;
+            justify-content: center;
+        }
+    }
+</style>
+        
+    </head>
+    <body>
+ <section class="header">
+       <nav>
+           <a href="index.html"><img src="image/logo.a.png"></a>
+           <div class="nav-links" id="navLinks">
+               <i class="fa-solid fa-xmark" onclick="hideMenu();"></i>
+             <ul>
+                    <li><a href="file:///C:/Users/Safta%20Alessandra/Desktop/INFO/index.html">HOME</a></li>
+                    <li><a href="file:///C:/Users/Safta%20Alessandra/Desktop/INFO/Bestfood.html">Bestfood</a></li>
+                    <li><a href="file:///C:/Users/Safta%20Alessandra/Desktop/INFO/Landmarks.html">Landmarks</a></li>
+                    <li><a href="file:///C:/Users/Safta%20Alessandra/Desktop/INFO/Travel.html">Travel</a></li>
+                    <li><a href="file:///C:/Users/Safta%20Alessandra/Desktop/INFO/Sport.html">Sport</a></li>
+                    <li><a href="file:///C:/Users/Safta%20Alessandra/Desktop/INFO/FORM.html">Formular Inscriere</a></li>
+                </ul>
+          </div>
+           <i class="fa-solid fa-bars"  onclick="showMenu();"></i>
+      </nav>
+     
+ <div class="text-box1">
+     
+            <h1>Orsova city</h1>
+     
+            <p>Un oras la malul Dunarii care te poate incanta dintr-o singura privire,<br>cauti:relaxare,aventura,mancare deosebita?</p>
+     
+     
+            <a href=#jos>Continua</a>
+     
+     <i class="fa fa-arrow-down" aria-hidden="true"></i>
+     
+      </div>
+     
+     
+     <!-- Containerul pentru datele senzorului -->
+<div class="weather-container">
+    <div class="weather-item">
+        <h3>Temperatură</h3>
+        <div class="weather-value" id="temperature">--°C</div>
+    </div>
+    <div class="weather-item">
+        <h3>Umiditate</h3>
+        <div class="weather-value" id="humidity">--%</div>
+    </div>
+</div>
+     
+     
+     
+     
+     
+                   
+ </section>
+        
+        
+<!-------Course------>
+        <section id="jos">
+ <section class="course">
+        <h1> Importanta Orasului de a lungul anilor </h1 >
+            <p> Are o asezare si o istorie intensa</p>
+     
+     <div class="row">
+     <div class="course-col">
+         <h3>Intindere</h3>
+         <p>Este un oras din judetul Mehedinti,este situat pe malul lacului de acumulare Portile de Fier I de pe Dunare,in zona de varsare a raului Cerna in Dunare.Distanta de la Orsova pana la municipiul Drobeta Turnu Severin este de 29,1km.</p>
+         </div>
+           <div class="course-col">
+         <h3> Dunarea</h3>
+         <p>Dunarea este al doilea cel mai lung fluviu din Europa,face parte din granita dintre Serbia si Romania.Are rol esential in hidrocentralele(Portile de Fier I si II).</p>
+         </div>
+        <div class="course-col">
+         <h3> Insula pierduta</h3>
+         <p> Insula scufundata de cresterea nivelului Dunari odata cu formarea lacului de acumulare al hidrocentralei Portile de Fier I,numita Ada-Kaleh.</p>
+         </div>
+     </div>
+     </section>
+          
+        </section>
+        
+<!-------campus------->
+        
+<section class="campus">
+    <h1> Impact</h1>
+    <p>Un oras lovit de schimbari</p>
+    <div class="row">
+        <div class="campus-col">
+        <img src="image/8.jpg">
+            <div class="layer">
+            <h3>ORAS</h3></div>
+            
+        </div>
+         <div class="campus-col">
+        <img src="image/chip.jpg">
+            <div class="layer">
+            <h3>ISTORIE</h3></div>
+            
+        </div>
+         <div class="campus-col">
+        <img src="image/img.jpg">
+            <div class="layer">
+            <h3>ENERGIE</h3></div>
+            
+        </div>
+    </div>
+        </section>
+        
+
+<!-----Call to action----->
+        <section class="cta">
+            <h1> Dornic de aventuri,<br>viziteaza orasul Orsova</h1>
+            <a href="file:///C:/Users/Safta%20Alessandra/Desktop/INFO/Bestfood.html"class="hero-btn">GO VISIT</a>
+            
+        </section>
+        
+        <hr>
+<section class="about">
+    <h4>About us</h4>
+    <p>Pentru mai multe detali contacteazane la echipa work.SA. </p>
+    <div class="icons">
+     <i class="fa fa-facebook"></i>
+             <i class="fa fa-twitter"></i>
+             <i class="fa fa-instagram"></i>
+        <i class="fa fa-linkedin"></i>
+        
+    
+    </div>
+    <p> Made with<i class="fa fa-heart-o"></i>by the tem work.S.A.</p>
+    
+        <a href="https://scanstart.ro/">scanstart.ro      /</a>
+    
+        <a href="http://csac.ulbsibiu.ro/">   csac.ro     /</a>
+    
+        <a href="https://www.instagram.com/cie.engineering_ulbs/?hl=en">   https://www.instagram.com/cie.engineering_ulbs/?hl=en      /</a>
+        </section>
+
+        
+        
+        
+        <!-- Script Firebase pentru conectarea la senzor -->
+<script type="module">
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/11.8.1/firebase-app.js";
+    import { getDatabase, ref, onValue } from "https://www.gstatic.com/firebasejs/11.8.1/firebase-database.js";
+    import { getAnalytics } from "https://www.gstatic.com/firebasejs/11.8.1/firebase-analytics.js";
+
+    const firebaseConfig = {
+        apiKey: "AIzaSyCR4543J2kApr6ELQjHi_-8iWElw0Ke3Bc",
+        authDomain: "senzor-temperatura-17dc0.firebaseapp.com",
+        databaseURL: "https://senzor-temperatura-17dc0-default-rtdb.firebaseio.com",
+        projectId: "senzor-temperatura-17dc0",
+        storageBucket: "senzor-temperatura-17dc0.appspot.com",
+        messagingSenderId: "882240521897",
+        appId: "1:882240521897:web:4ee19288b43fbb674e4bb8",
+        measurementId: "G-MEFQ8QV1ET"
+    };
+
+    // Initialize Firebase
+    const app = initializeApp(firebaseConfig);
+    const analytics = getAnalytics(app);
+    const database = getDatabase(app);
+
+    // Create references to your data
+    const humidityRef = ref(database, "DHT_11/Humidity");
+    const temperatureRef = ref(database, "DHT_11/Temperature");
+
+    // Listen for changes and update UI
+    onValue(humidityRef, (snapshot) => {
+        const humidity = snapshot.val();
+        document.getElementById("humidity").innerHTML = humidity + "%";
+    });
+
+    onValue(temperatureRef, (snapshot) => {
+        const temperature = snapshot.val();
+        document.getElementById("temperature").innerHTML = temperature + "°C";
+    });
+</script>
+        
+        
+        
+        
+        
+ </body>
+</html>
+
+
+
+
+
+
+
